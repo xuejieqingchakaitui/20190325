@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .bg0{
+            background: red;
+
+            color: white;
+        }
+        .bg1{
+            background: yellow;
+
+            color: aqua;
+        }
+        .hover{
+            background: palegreen;
+        }
+    </style>
+</head>
+<body>
+<ul class="news" id="news">
+    <li>重农固本！习近平对“三农”的深深牵挂9 奇数行</li>
+    <li>重农固本！习近平对“三农”的深深牵挂10 偶数行</li>
+    <li>重农固本！习近平对“三农”的深深牵挂9 奇数行</li>
+    <li>重农固本！习近平对“三农”的深深牵挂10 偶数行</li>
+    <li>重农固本！习近平对“三农”的深深牵挂9 奇数行</li>
+    <li>重农固本！习近平对“三农”的深深牵挂10 偶数行</li>
+    <li>重农固本！习近平对“三农”的深深牵挂9 奇数行</li>
+    <li>重农固本！习近平对“三农”的深深牵挂10 偶数行</li>
+    <li>重农固本！习近平对“三农”的深深牵挂9 奇数行</li>
+    <li>重农固本！习近平对“三农”的深深牵挂10 偶数行</li>
+</ul>
+<script>
+    //js中的数据类型：
+         //基本数据类型：number string boolean null undefined
+    //引用数据类型：
+    //对象数据类型：object{} array[] regexp    /\d+/ date math
+    //函数数据类型：function
+
+
+    //基本数据类型 操作的是具体的值
+    //引用数据类型操作的是引用地址
+
+//检测数据类型有四种：
+    // typeof 的返回值都有："number" "string" "boolean" "undefined" "object" "function"
+    // constructor
+    // instanceof
+    // Object.prototype.toString.call()
+    //typeof null // "object" 一个“无”的对象
+
+
+
+
+
+    //boolean【布尔类型】
+    // 0 '' NaN null undefined 这五个值转换成boolean值是false，其余的都是true
+    //!一个叹号是去反
+    //！[]===[]//先去反前面的空数组，为false，然后将他们转换为数字类型，false转换为0 ，[]转换为0 0===0为true
+    //[]===[]//false 因为他们比较的是引用地址
+    // if ('a' + 'b') 是字符串'ab'他的值转换成boolean类型就是true（因为他不是空的字符串所以不是false）
+
+
+    //对象
+    //对象是用{}抱起来的，左边是属性名，右边是属性值
+    //获取对象：对象名['属性名']
+
+
+
+
+
+    //隔行变色和鼠标划入划出事件
+    var list = document.querySelectorAll('.news>li');
+    for (var i =0;i<list.length;i++){
+        var cur = `bg${i%2}`//将bg i%2的一份值赋给cur一份
+        list[i].className= cur
+        list[i].cc = cur//自定义一个属性名，
+        // 然后将bg i%2的一份值给予到自定义的那个属性名!
+        // 将计算出来的类名 保存到自身cc属性上
+        //鼠标划入事件
+        list[i].onmouseover= function () {
+            this.className='hover'
+        }
+        //鼠标划出事件
+        list[i].onmouseout = function () {
+            // 鼠标滑出时 在设为之前的类名
+           this.className= this.cc
+        }
+    }
+    //任意数求和：
+    //给他传递任意数据类型的实参，我们在函数内只对能转化为有效数字的值进行累加积累
+    function sun() {
+        var tata = 0
+       for (var i=0;i<arguments.length;i++){
+            var car =  Number(arguments[i])//判断一下集合中的数值是不是数字
+           if (!isNaN(car)){//如果循环下来的数字等于NaN，那么去反过后等于false，就不会执行下方累加的代码
+               //如果循环下来的数字不等于NaN，那么取反过后就等于true，就会执行下方累加的代码
+               tata+=car
+           }
+
+       }
+       return tata
+    }
+    sun(1,2,3,4,5,6,7,8,9,NaN)
+    console.log(sun(1,2,3,4,5,6,7,8,9,NaN))
+
+
+
+
+
+
+
+
+
+    //写一个随机的验证码
+  function cer(len) {
+      var bar='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+      len= len||4;
+      var codStr='';
+      for (var a= 0;a<len;a++){
+          var ind = Math.round(Math.random()*(bar.length-1));
+          var char = bar[ind];
+          if (codStr.indexOf(char)===-1){
+              codStr+=char
+          }
+      }
+      console.log(codStr)
+      return codStr
+  }
+cer()
+
+
+
+
+
+
+//数组的方法：
+    //向末尾添加：push
+    var arr= [2,3,4]
+    arr.push(5)
+    console.log(arr)
+    //向开头添加
+    var brr =[4,5,6]
+    brr.unshift(3)
+    console.log(brr)
+    //删除末尾最后一项
+    var crr = [7,8,9]
+    crr.pop()
+    console.log(crr)
+    //删除第一项
+    var drr = [3,5,7]
+    drr.shift()
+    console.log(drr)
+    //数组克隆
+    var err = [1,5,9]
+    var abc=err.slice(0)
+    abc===err
+    console.log(abc)
+    console.log(abc===err)
+    //数组从小到大排序
+    var frr = [1,3,5,7,9,8,6,4,2]
+    frr.sort(function (a,b) {
+        return a-b
+        
+    })
+    console.log(frr)
+    //数组从小到排序
+    var jrr = [1,3,5,7,9,8,6,4,2]
+    jrr.sort(function (c,d) {
+        return d-c
+    })
+console.log(jrr)
+
+</script>
+</body>
+</html>

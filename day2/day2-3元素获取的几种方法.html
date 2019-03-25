@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="aaa" class="ci">我是div</div>
+<div  class="ci">我是div</div>
+<ul id="aaaa">
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+    <li>item4</li>
+    <li>item5</li>
+</ul>
+
+<ul>
+    <li>12312</li>
+    <li>12312</li>
+    <li>12312</li>
+</ul>
+
+<ul>
+    <li>12312</li>
+    <li>12312</li>
+    <li>12312</li>
+</ul>
+<script>
+//    //在原生js里要想操作元素，就要先找到他
+//    //根据我们的id名获取一个元素
+//    document.getElementById('id名字')
+//    //根据class获取多个元素
+//    document.getElementsByClassName('class名')
+//    //根据标签名获取元素（tag name）
+//    document.getElementsByName('标签名')
+//    var i = document.getElementById('aaa');
+//    console.dir(i)
+//    var  i = document.getElementsByClassName('ci');
+//    console.log(i)
+//// 根据标签名获取元素 返回一个元素集合
+//var ele5 = document.getElementsByTagName('div')
+//console.log(ele5) // [div, div, div]
+//console.log(ele5[1]) // 获取集合中第二个元素
+//    ele5[1].innerHTML = 133
+//    var i =document.getElementById()
+
+// document代表的是整个html文档
+// 获取整个HTML文档中的索引li元素
+// 获取范围
+// var list = document.getElementsByTagName('li')
+// console.log(list) // [li, li, li, li, li]
+
+// 逐级获取元素
+
+// 先获取父元素 ul
+var news = document.getElementById('aaaa')
+
+// 在通过父元素获取到 里面所有li元素
+var list = news.getElementsByTagName('li')
+console.log(list) // [li, li, li, li, li]
+
+
+</script>
+</body>
+</html>
+

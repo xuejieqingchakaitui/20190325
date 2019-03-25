@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function sum() {
+        var total = 0// 将每次循环出来的值 累加到 total自身保存起来
+        for (var i = 0;i<arguments.length;i++){
+            //现将实参转化为数字类型
+            var num = Number(arguments[i])
+            // isNaN 检测一个值是不是NaN
+            // 如果是NaN 返回true 不累加
+            // 如果不是NaN 返回false 累加
+            //只要是数字，才能进入到这个条件里，方可进入累加
+            if (!isNaN(num)){
+                total+=num
+            }
+        }
+        return total
+    } var a = sum(1, 2, NaN, 3, "AAA");
+    console.log(a)
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function unique(ary) {
+        var newArr= []
+        for (var  i =0 ;i<ary.length;i++){
+            var cur = ary[i]
+            if (newArr.indexOf(cur)===-1) {
+                newArr.push(cur)
+            }
+        }
+    } // 想给谁去重 就把谁 传递进来
+        var arr1 = [1,1,1,2,2,3,3]
+        unique(arr1)
+        var arr2=[5,5,5,6,6,7,7,8,9,7,]
+        unique(arr2)
+
+
+</script>
+</body>
+</html>

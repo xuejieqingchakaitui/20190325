@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .bg0{
+            background-color: red;
+        }
+        .bg1{
+            background-color: yellow;
+        }
+        .hover{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+<ul class="news" id="news">
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+</ul>
+<script>
+    var list = document.querySelectorAll('.news>li')
+
+    for (var i = 0; i <list.length;i++){
+
+        list[i].className=`bg${i % 2}`
+        //通过自定义属性myClass！将类名保存到当前元素自身
+        list[i].myClass = `bg${i % 2}`
+
+
+
+        //鼠标划入事件onmouseover
+        list[i].onmouseover = function () {
+            this.className = 'hover'
+
+        }
+
+
+        //鼠标划出事件onmouseou
+        list[i].onmouseout=function () {
+            //当划出的时候，将当前元素类名，修改为之前的类名
+            this.className=this.myClass
+        }
+    }
+</script>
+</body>
+</html>

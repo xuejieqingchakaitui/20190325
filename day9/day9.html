@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //在js中整个html文档，被抽象为document
+    //获取元素
+    document.getElementById()//id获取
+    document.getElementsByTagName()//标签获取
+    document.getElementsByClassName()//class名字获取
+    //在整个html文档中，所有事物，都被称为DOM节点
+    //DOM节点，（元素，注释，文本，注释，document）
+    //像我们平时JS获取的，操作的都是元素节点（html标签）
+    // 浏览器将整个HTML 解析为一棵DOM树
+    // DOM树种所有事物 称为DOM节点
+    //获取根元素：(html元素)
+    document.documentElement
+    //获取head元素:
+    document.head
+    //获取body元素：
+    document.body
+
+//对于这些节点来说，存在
+
+    //创建节点：
+    //document.createElement('标签')
+    var  ele = document.createElement('h3')
+    ele.innerHTML = '我是h3元素'
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

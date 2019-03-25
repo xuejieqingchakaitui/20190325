@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //选择排序：
+    //1、每轮在未排序的序列中，找到最小的元素，
+    // 2、每轮比较完就让最小元素和起始位置交换位置
+     var arr = [9, 11, 8, 14, 4]
+    function select_sort(ary) {
+        // 外层循环负责指定比较的起始位置
+        for (var i = 0; i < ary.length - 1; i++) {
+            // minIdx每次最小值索引位置
+            var minIdx = i // 假设当前i这位置是最小值
+            // 内层循环负责将当前项 后面每一项依次取出 比小
+            for (var j = i + 1; j < ary.length; j++) {
+                // 后一项分别和当前假设的这一项 比谁更小
+                if (ary[j] < ary[minIdx]) {
+                    minIdx = j
+                }
+            }
+            // 比较完每轮 让最小值arr[minIdx]和起始位置那一项arr[i]交换位置
+            var temp = ary[i]
+            ary[i] = ary[minIdx]
+            ary[minIdx] = temp
+        }
+        return ary
+    }
+
+//    var arr = [9, 11, 8, 14, 4]
+    console.log(select_sort(arr))
+
+</script>
+</body>
+</html>

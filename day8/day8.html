@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //数组去重
+    //双FOR
+    var ary = [1,2,3,2,4,5,4,4,5,2,3,1,5,4,1,2,3,2,1,4,5]
+    //把数组当中的每一项都取出来
+    //用当前项和后面的每一项来进行比较
+    for (var i = 0;i<ary.length;i++){
+        var cur = ary[i]//cuy表示本轮循环的当前项
+        //用当前项和后面的每一项进行比较
+        for (var j = i+1;j<ary.length;){
+            if (cur===ary[j]){
+                //如果相同，就删除同项
+                ary.splice(j,1)
+
+          }else {//这是第二种方法
+                j++
+           }
+        }
+    }
+    console.log(ary)
+//返回新数组
+
+    var ary2 = [1,2,3,2,4,5,4,4,5,2,3,1,5,4,1,2,3,2,1,4,5]
+    var newArr = []
+    for (var k = 0; k<ary2.length;k++){
+        var cur = ary2[k]
+       if (newArr.indexOf(cur)===-1){
+           newArr.push(cur)
+        }
+    }
+    console.log(newArr)
+
+
+    //对象发去重，利用的是对象的key是唯一的
+    var ary3 = [1,2,3,2,4,5,4,4,5,2,3,1,5,4,1,2,3,2,1,4,5]
+    var obj = {}
+    for (var h =0;h<ary3.length;h++){
+        var cur2 = ary3[h]
+        if (!obj[cur2]){
+            obj[cur2]=cur2
+        }
+    }
+    var newArr2 = []
+    for (var  key in  obj){
+        newArr2.push(obj[key])
+    }
+    console.log(newArr2)
+</script>
+</body>
+</html>

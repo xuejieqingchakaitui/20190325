@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .tab-box{
+            width: 300px;
+            margin: 20px auto;
+        }
+        .tab-header li{
+            float: left;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid pink;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+        .tab-panel div{
+            display: none;
+            box-sizing: border-box;
+            width: 300px;
+            height: 150px;
+            text-align: center;
+            line-height: 150px;
+            border: 1px solid pink;
+            font-size: 24px;
+
+        }
+        /*选中样式*/
+        .tab-panel div.select{
+            display:block;
+        }
+        .tab-header li.select{
+            background-color: orange;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<div class="tab-box" id="tab-box">
+    <!--header部分-->
+    <ul class="tab-header clearfix">
+        <!--第一个默认显示-->
+        <li class="select">关注</li>
+        <li>推荐</li>
+        <li>小说</li>
+    </ul>
+    <!--面板部分-->
+    <div class="tab-panel">
+        <!--第一个默认显示-->
+        <div class="select">我的关注</div>
+        <div>我的推荐</div>
+        <div>我的小说</div>
+    </div>
+</div>
+<script>
+    var headerList = document.querySelectorAll('.tab-header>li') ;
+    var panelList = document.querySelectorAll('.tab-panel>div')
+   for (var i = 0; i < headerList.length; i++){
+       headerList[i].myId = i;
+        headerList[i].onclick = function () {
+            for (var l = 0; l<headerList.length;l++){
+                headerList[l].className= ''
+                panelList[l].className= ''
+            }
+            this.className = 'select'
+            panelList[this.myId].className = 'select'
+        }
+   }
+</script>
+</body>
+</html>

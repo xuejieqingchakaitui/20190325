@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //把数组中每一项取出来
+    //var a= [10,20,30,40,50]
+    //利用for循环
+    //把变量i当做索引来用
+//    for (var i=0;i>a.length;i++){
+//        console.log(a[i])
+//    }
+
+    //数组内置的遍历方法：
+//    //forEach
+////    var a= [10,20,30,40,50]
+////    a.forEach(function (item,index,ary) {
+////        //item  当前这一项
+////        //index 当前项的索引
+////        //ary 原数组（ary===a）
+//    })
+
+    //map
+    //修改每一项，组成新数组然后返回
+    var a= [10,20,30,40,50]
+    a.map(function (item,index,ary) {
+        //item当前遍历出来这一项 index当前项索引
+        return item *2 //每次指定返回值，会作为新数组中的内容
+    })
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //求和的函数
+    //a/b相当于再函数里申明了两个变量
+    //a和b 用来接收add函数执行传递进来的参数
+    //形式上de 参数
+    function add(a,b) {
+       console.log(a,b)
+    }
+    add(2,4)
+    //目前add这个函数，只能进行1+1的求和
+//    add()
+//    add()
+//    add()
+//    add()
+
+    //函数在执行的传递参数（往函数体里传递值）
+//函数执行的时候，传递两个值2,4
+    //传递进来的参数：实参
+
+    function abc(a) {
+        console.log(a)
+
+    }
+    abc(1)
+    abc(2)
+    abc(3)
+//两个数，求和的函数
+//    function sum(a,b) {
+//        console.log( a+b )
+//
+//    }
+//sum(10,20)
+
+
+
+
+    //设置了形参，没有传递实参的时候，这个形参变量是默认值undefined
+    //相当于你申明了变量，并没有赋值
+    function sum(a,b) {
+        console.log( a,b )
+
+    }
+    sum(1)//a=1  b=undefined
+</script>
+</body>
+</html>

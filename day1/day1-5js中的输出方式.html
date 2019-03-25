@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<h3>hell我是h3</h3>-->
+<h2 id="h2"></h2>
+<h3 id="h3"></h3>
+
+<script>
+    //弹窗会阻塞html加载
+    //一弹窗形式输出：
+//    alert('提示框')//提示框
+//    confirm('确认框')//确认框
+
+//    var  res = confirm('确认框')//接受弹窗的返回结果 true 或者false
+//    console.log(res)
+
+
+
+//    var res2 = prompt('你稀罕我么')//将用户提交的内容反馈给我们
+//    console.log('res2')
+//    var  title= '123'
+//    alert(title)
+    //alert() confirm() prompt()
+    //直接将内容写入body
+//    var h2 = '<h2>我是外星人</h2>'
+//    document.write('h2')
+//    document.write('h2')
+//    document.write('h2')
+
+    //innerHTML：识别标签
+    //innerText:把内容当中普通文本，输出到页面
+    // 区别就是 innerText 不能够识别标签内容
+    var h2 = document.getElementById('h2')
+    h2.innerHTML= '<i>啥是佩奇</i>'
+    var h3 =document.getElementById('h3')
+    h3.innerText='<i>啥是佩奇</i>'
+
+
+    //控制台输出（调试）
+    console.log()
+    console.dir()//打印出更详细的信息
+
+
+</script>
+</body>
+</html>

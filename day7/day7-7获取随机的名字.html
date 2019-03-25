@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">随机点名</button>
+<script>
+    var btn = document.getElementById('btn')//获取上面的元素
+    btn.onclick = function () {//点击事件
+        // 索引范围 0 ~ (arr.length - 1)
+        var arr = [
+            "边耿华",
+            "刘晨迪",
+            "于腾越",
+            "韩宗源",
+            "王晖",
+            "续斗寅",
+            "李兵",
+            "田成风",
+            "王晓雨",
+            "陈泉山"
+        ];
+        // 随机索引
+        var ind = Math.round(Math.random() * (arr.length - 1))
+
+        // 将得到的名字 输出到按钮中
+        this.innerHTML = arr[ind]
+    }
+</script>
+</body>
+</html>

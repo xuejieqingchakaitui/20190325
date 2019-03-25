@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .new{
+            width: 600px;
+            margin: 30px auto;
+            list-style: none;
+            font-size: 16px;
+            border: 1px solid pink;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .new li{
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h3 id="title"></h3>
+<ul class="new">
+    <li>这是奇数行</li>
+    <li>这是偶数行</li>
+    <li>这是奇数行</li>
+    <li>这是偶数行</li>
+    <li>这是奇数行</li>
+    <li>这是偶数行</li>
+    <li>这是奇数行</li>
+    <li>这是偶数行</li>
+    <li>这是奇数行</li>
+    <li>这是偶数行</li>
+    <li>这是奇数行</li>
+    <li>这是偶数行</li>
+    <li>这是奇数行</li>
+    <li>这是偶数行</li>
+    <li>这是奇数行</li>
+    <li>这是偶数行</li>
+    <li>这是奇数行</li>
+    <li>这是偶数行</li>
+    <li>这是奇数行</li>
+    <li>这是偶数行</li>
+    <li>这是奇数行</li>
+    <li>这是偶数行</li>
+    <li>这是奇数行</li>
+    <li>这是偶数行</li>
+    <li>这是奇数行</li>
+    <li>这是偶数行</li>
+    <li>这是奇数行</li>
+    <li>这是偶数行</li>
+    <li>这是奇数行</li>
+    <li>这是偶数行</li>
+    <li>这是奇数行</li>
+    <li>这是偶数行</li>
+    <li>这是奇数行</li>
+    <li>这是偶数行</li>
+    <li>这是奇数行</li>
+    <li>这是偶数行</li>
+    <li>这是奇数行</li>
+    <li>这是偶数行</li>
+    <li>这是奇数行</li>
+    <li>这是偶数行</li>
+    <li>这是奇数行</li>
+    <li>这是偶数行</li>
+    <li>这是奇数行</li>
+    <li>这是偶数行</li>
+    <li>这是奇数行</li>
+    <li>这是偶数行</li>
+    <li>这是奇数行</li>
+    <li>这是偶数行</li>
+    <li>这是奇数行</li>
+    <li>这是偶数行</li>
+</ul>
+<script>
+    var list = document.querySelectorAll('.new>li')
+//    for (var i =0;i <list.length; i++){
+//        var a = list[i];
+//        if (i % 2===0){
+//            a.style.backgroundColor='red'
+//        }else {
+//            a.style.backgroundColor='green'
+//        }
+//    }
+
+//    for (var i = 0;i<list.length;i++){
+//        var a = list[i]
+//   if (i % 2 ===0){
+//       a.style.background='#FFDEAD'
+//   }else {
+//       a.style.background='#FFB6C1'
+//   }
+//    }
+
+    var title = document.querySelector('#title')
+    title.innerHTML = 'hello title'
+    var score = 70;
+    if (score >=60 && score <80){
+        console.log('你的成绩合格了')
+    }
+    for (var i = 0;i<list.length;i++){
+        var a = list[i];
+        switch (i % 3){
+            case 0:
+                a.style.background='red';
+                break;
+            case 1:
+                a.style.background='yellow';
+                break
+            case 2:
+                a.style.background='pink'
+                break
+
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style/reset.css">
+    <link rel="stylesheet" href="style/day1.css">
+
+</head>
+<body>
+<div id="box"></div>
+<!--<div id="box"></div>-->
+<!--<div onclick="alert('点击弹出')">什么鬼</div>-->
+<!--<div onclick="alert()">点我</div>-->
+<!--<script>-->
+    <!--alert("这是个弹窗")-->
+<!--</script>-->
+<!--此时获取div的时候，页面中还没有价值这个html-->
+<!--<script src="js/day1.js">-->
+    <!--alert('内嵌进来')-->
+<!--</script>-->
+<!--一般放在body底部-->
+<!--<script>-->
+    <!--alert('这是个弹窗')-->
+<!--</script>-->
+<!--<script src="js/day1.js"></script>-->
+<script>
+//    var a = document.getElementById('box')
+//    console.log(a)
+//    var n = 2019;
+//    console.log(n)
+//    n = 2020
+//console.log(n)
+//    const m = 100;
+//    console.log(m);
+//    m = 200
+//    document.write('我是外星人')
+//console.log(typeof true)
+    //"my name is , I like"
+    var MyName ='zhufeng';
+    var fe = '前端';
+    var srt1='my name is , I like fe';
+    console.log(srt1);
+
+    var  srt2 = `my name is ${MyName} , I like ${fe} ${1 + 2}`;
+    console.log(srt2);
+
+
+
+var box1 = document.getElementById('box');
+
+var str3 = `<i>my name is ${MyName} ,</i>
+<i> I like ${fe}</i>
+<i> 1+2=${1 + 2}</i>`;
+box1.innerHTML = str3;
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //双循环去重
+    //用当前项，和他后面每一项进比较，如果相等就说明重复，将后一项删除（splice（j，1））
+    var arr = [1,1,1,2,1,2,1,2]
+    function unique(ary) {
+  for (var i = 0;i<ary.length;i++){//外层循环是去除当前的这个值
+      //i当前项的索引
+      var  cun =ary[i]
+      for (var j = i+1;j<ary.length;){//内层循环负责将当前项，后面的每一项依次取出来
+          if (cur===ary[j]){
+              //根据后一项的索引，删除
+              //如果在当前位置，删除了这一项，就在从这个位置再比较删除一次
+              ary.splice(j,1)
+          }else {
+              j++//指向下一个位置的数
+          }
+
+      }
+      }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .hover{
+            background-color: orangered;
+        }
+        .bg0{
+            background-color: yellow;
+        }
+        .bg1{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+<!--鼠标划入划出事件-->
+<p>别那么骄傲</p>
+<!--隔行变色-->
+<ul class="news" id="news">
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+    <li>零是奇数还是偶数?_百度知道</li>
+</ul>
+<script>
+    //鼠标划入划出事件！
+    var a =document.getElementsByTagName('p');
+    a[0].onmouseover = function () {
+        this.className='hover'
+    };
+    a[0].onmouseout=function () {
+        this.className=''
+    }
+   //隔行变色
+    //实现隔行变色，鼠标划入划出事件
+    var list = document.querySelectorAll('.news>li')
+    for (var i= 0;i<list.length;i++){
+        list[i].className=`bg${i % 2}`
+        list[i].myClass=`bg${i % 2}`
+        list[i].onmouseover=function () {
+            this.className='hover'
+        }
+       list[i].onmouseout=function () {
+           this.className=this.myClass
+       }
+    }
+
+    //添加数组：
+    //1、向数组末尾添加数组
+    //第一种方法：
+    var arr = [10,20,30];
+    arr.push(40)
+    console.log(arr)
+    //第二种方法：
+    var brr = [10,20,30]
+    brr[brr.length]=40
+    console.log(brr)
+    //第三种方法：
+    var crr = [10,20,30]
+    crr.splice(crr.length,0,40)//从索引x处开始删除，删除Y个，将第二项后面的所有参数插入到删除位置（索引x处）
+    console.log(crr)
+    //2、向数组开头添加
+    //第一种方法
+    var drr = [20,30,40]
+    drr.unshift(10)
+    console.log(drr)
+    //第二种方法：
+    var err = [20,30,40]
+    err.splice(0,0,10)//从索引x处开始删除，删除Y个，将第二项后面的所有参数插入到删除位置（索引x处）
+    console.log(err)
+
+
+    //删除数组末尾最后一项
+    //第一种方法：
+    var frr = [10,20,30]
+    frr.pop()
+    console.log(frr)
+    //第二种方法：
+    var grr = [10,20,30]
+    grr.length--
+    console.log(grr)
+    //第三种方法：
+    var hrr=[10,20,30]
+    hrr.splice(-1)
+    console.log(hrr)
+    //删除数组开头第一项
+    //第一种方法：
+    var irr = [10,20,30]
+    irr.shift()
+    console.log(irr)
+    //第二种方法：
+    var grr = [10,20,30]
+    grr.splice(0,1)//从索引X处开始，删除y个{第一个参数，是当做删除的起始索引，第二个参数是删除的个数}
+    console.log(grr)
+
+    //数组的克隆
+    var krr = [10,2,3]
+    krr.slice(1)
+    console.log(krr)
+    console.log(krr.slice(1))//从索引1，克隆后面的所有值，截取到末尾
+
+    //数组排序
+    //从小到大
+    var lrr =[40,1,62,35,505,12 ,9 ,63]
+    lrr.sort(function (a,b) {
+        return a-b
+    })
+     console.log(lrr)
+    //从大到小
+    var mrr=[40,1,62,35,505,12 ,9 ,63]
+    mrr.sort(function (a,b) {
+        return b-a
+    })
+   console.log(mrr)
+    //将数组转换为字符串
+    //第一种：
+    var nrr = [10,20,30]
+    nrr.toString()
+    console.log(nrr.toString())
+    //第二种
+    var orr = [10,20,30]
+    eval(orr.join('+'))//将需要运行的结果放在eval里，起到的作用就是利用eval特性！
+    console.log(eval(orr.join('+')))
+    //数组内置的遍历方法
+    var prr = [10,20,30,40,50]
+    prr.forEach(function (item,index,ary) {
+ console.log(ary)
+    })
+    var qrr = [10,20,30,40,50]
+    var abc=qrr.map(function (item,index,ary) {
+        if (index === 1) {//如果当前索引的值是第一个的话
+            return item*2//那么让当前这一项的数组乘以2
+        }
+       return item//否则就按原来的这一项显示
+    })
+console.log(abc)//打印更改值的abc属性名
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //switch判断一个值，多种情况
+    //语法：
+//    switch (值) {
+//        case 情况1: // case相当于 === 等于
+//            // 情况1的时候 要执行代码
+//            break; // 中断
+//        case 情况2:
+//            // 情况2的时候 要执行代码
+//            break;
+//        case 情况3:
+//            // 情况3的时候 要执行的代码
+//            break;
+//        default: // 相当于else 否则
+//        // 以上情况 都不成立时 执行这里代码
+//    }
+    //switch 里只有等于的比较
+    //不加break继续往下直接执行，知道遇到下一个break才停止（最好就是每个case后面都要家一个break，做到中断）
+    var age = 15;
+        switch (age) {
+            case 10:
+                console.log('小学');
+            break;
+            case 18:
+                console.log('高中');
+            break;
+            case 22:
+                console.log('大学');
+                break;
+            default:
+                console.log('社会')
+        }
+    var  age = 25;
+    if (age === 10){
+        console.log('小学')
+    }else if(age === 20){
+        console.log('大学')
+    }else{
+        console.log('社会')
+    }
+
+
+</script>
+</body>
+</html>

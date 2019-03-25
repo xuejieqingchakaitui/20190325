@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .tab-box{
+            width: 300px;
+            margin: 20px auto;
+        }
+        .tab-header li{
+            float: left;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid pink;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+        .tab-panel div{
+            display: none;
+            box-sizing: border-box;
+            width: 300px;
+            height: 150px;
+            text-align: center;
+            line-height: 150px;
+            border: 1px solid pink;
+            font-size: 24px;
+
+        }
+        /*选中样式*/
+        .tab-panel div.select{
+            display:block;
+        }
+        .tab-header li.select{
+            background-color: orange;
+            color: #ffffff;
+        }
+    </style>
+
+</head>
+<body>
+<div class="tab-box" id="tab-box">
+    <!--header部分-->
+    <ul class="tab-header clearfix">
+        <!--第一个默认显示-->
+        <li class="select">关注</li>
+        <li>推荐</li>
+        <li>小说</li>
+    </ul>
+    <!--面板部分-->
+    <div class="tab-panel">
+        <!--第一个默认显示-->
+        <div class="select">我的关注</div>
+        <div>我的推荐</div>
+        <div>我的小说</div>
+    </div>
+</div>
+<script>
+//获取操作元素
+//获取所以li元素
+    var headerList = document.querySelectorAll('.tab-header > li')
+
+    //获取所以的div元素
+    var panelList = document.querySelectorAll('.tab-panel > div')
+//    console.log(headerList)
+//    console.log(panelList)
+
+//给每个li元素绑定点击事件
+    for (var i = 0;i < headerList.length; i++){
+        //每次循环中的i的值，才是我们想要的值
+        //将自身的属性值，自定义一个名字。再暂时保存给自身
+        headerList[i].ind=i
+        headerList[i].onclick = function () {
+            //不能在点击事件中，使用变量i作为索引
+            //清空全部样式.将所有li和div类名清空
+            for (var a = 0;a < panelList.length; a++){
+                headerList[a].className=''
+                panelList[a].className=''
+            }
+            //给当前li添加类名'select'即点击后的样式
+            this.className='select'
+            panelList[this.ind].className='select'
+        }
+    }
+  //当我们点击for循环在就已经循环完了，此时变量i的值，都是循环完后的值
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //slice（斯莱丝）截取数组中内容组成新数组，但不会修改原来的数组
+    //情况一:
+    //slice(不写参数，或者写一个0)，完全会克隆一份，做为新数组返回
+    //不会影响到原数组
+//    var  a =[1,2,3]
+//    a.shift()
+//    var res = a.shift()//返回值是原数组的克隆值
+
+
+   //情况二：
+    //slice(x),从索引值x处开始，截取数组到末尾，将截取到的内容组成新的数组返回
+//    var  a =[1,2,3,4]
+//      a.slice(2)
+//    //不会影响到原数组
+//   var res = a.slice(2)
+//    console.log(res)
+//情况三：
+    //slice(x,y),从索引值x处开始，截取到索引y处，（注意不包含索引y这一项，）将截取到的内容，组成新的数组返回
+    //var  a =[10,20,30,40,50]
+    //a.slice(1,3)
+    //包前不包后
+    //从索引1截取到索引3这一项的位置，不包含索引3这一项
+    //不会影响到原数组
+    //var res = a.slice(1,3)
+    //console.log(res)
+
+    //情况四：
+    //支持负数的索引
+    //slice(-x)：===>slice(a.length-x)
+    var  a =[10,20,30,40,50]
+    var res = a.slice(-2)
+    console.log(res)
+
+    // //slice(-x,-y)：===>slice(length-x,length-y)
+</script>
+</body>
+</html>

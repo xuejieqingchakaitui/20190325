@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box"></div>
+<div id="box2"></div>
+<script>
+    //DOM动态的创建
+    //document.createElement(标签名)
+    //参数：标签名，h1 ul div li p ...
+    //返回值：新创建的DOM对象（元素对象）
+    //我们可以像操作现成的元素对象一样操作
+    var headline = document.createElement('h1')
+    headline.innerHTML= '我是一个新建的h1'
+    headline.style.background='#00b38a'
+    console.log(headline)
+
+
+    //插入新的DOM节点
+    //容器.appendChild(新元素)  像当前容器对象末尾追加新元素
+    document.body.appendChild(headline)//括号里的“新元素”就是上面定义书写的变量
+    //容器.insertBefore(新元素，老元素) 将新元素插入到老元素之前
+    var box2 = document.getElementById('box2');
+    //用节点关系获取box2
+    var box3 = box.nextElementSibling
+
+    //怎样删除一个DOM节点
+    //容器.removeChild（）
+    //返回值：被删除的节点
+
+
+    //怎样替换一个DOM节点
+    //容器.replaceChild（新元素，老元素）
+    document.body.replaceChild(headline,box2)
+    //返回值：被替换掉的老元素
+
+
+
+
+
+
+</script>
+</body>
+</html>

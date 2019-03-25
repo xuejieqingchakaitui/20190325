@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .bg0{
+            background: red;
+        }
+        .bg1{
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+<ul class="news" id="news">
+    <li>重农固本！习近平对“三农”的深深牵挂9 奇数行</li>
+    <li>重农固本！习近平对“三农”的深深牵挂10 偶数行</li>
+    <li>重农固本！习近平对“三农”的深深牵挂9 奇数行</li>
+    <li>重农固本！习近平对“三农”的深深牵挂10 偶数行</li>
+    <li>重农固本！习近平对“三农”的深深牵挂9 奇数行</li>
+    <li>重农固本！习近平对“三农”的深深牵挂10 偶数行</li>
+    <li>重农固本！习近平对“三农”的深深牵挂9 奇数行</li>
+    <li>重农固本！习近平对“三农”的深深牵挂10 偶数行</li>
+    <li>重农固本！习近平对“三农”的深深牵挂9 奇数行</li>
+    <li>重农固本！习近平对“三农”的深深牵挂10 偶数行</li>
+</ul>
+<script>
+    var list = document.querySelectorAll('.news>li')
+    for (var i = 0;i<list.length;i++){
+list[i].className=`bg${i % 2}`;
+        console.log(`bg${i % 2}`)
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //在字符串当中+号不代表求和，是起到连接的作用
+    function sum() {
+        var total = 0//专门创建一个变量，用来累加他自身的值。初始值为0
+        //把实参集合中每一项依次取出来
+        for (var i = 0; i< arguments.length; i++){
+           //在total原来的基础上，累加 arguments[i]
+            total+=arguments[i]
+        }
+        return total
+    }
+    var res1=sum(20,30,40)
+    //我们传递进来求和的参数是不定向的
+    console.log(res1)
+</script>
+</body>
+</html>

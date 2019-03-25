@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="but">默认按钮</button>
+<script>
+    //根据索引找到字符串中的某个字符
+    var atr = 'hello world!'
+     atr.charAt(0)
+    console.log(atr.charAt(0))
+    // match() 查找字符
+    var str = 'hello world 123'
+     str.match('world')
+    console.log(str.match('world'))
+    //替换字符
+    var brt = 'hello 雪狼'
+    var res=brt.replace('雪狼','燃灯')//前面写老值，后面写需要替换的值
+    console.log(res)
+    //字符串截取
+    // slice(x, y) 从索引x处开始，截取到索引y处（不包含索引y这一项）支持负数索引
+    // substr(x, n) 从索引x处开始，截取n个字符
+    // substring 从索引x处开始，截取到索引y处（不包含索引y这一项） 不支持负数索引
+
+    var atr = 'hello world!'
+    atr.slice(2,3) // slice(x, y) 从索引x处开始，截取到索引y处（不包含索引y这一项）支持负数索引
+    console.log( atr.slice(0,3))
+
+    atr.substr(3,3)//(x, n) 从索引x处开始，截取n个字符
+    console.log( atr.substr(3,3))
+
+    atr.substring(0,5)// 从索引x处开始，截取到索引y处（不包含索引y这一项） 不支持负数索引
+    console.log(atr.substring(0,5))
+
+    // split() 根据指定分隔符拆分成数组
+    var drt = 'hello 雪狼 hello 雪狼'//这里有空格，或者是加号，
+    // 当到次啊面拆分的时候需要用到和上面的一样
+    var aaa= drt.split(' ').join('+')//中间要加一个空格，这样才能将他们分开
+    //可以配合join{赵印}一起来使用，使其变成你想要的样式
+    console.log(aaa)
+
+
+
+
+
+
+
+
+
+
+
+
+    //创建一个随机的验证码：
+    //首先需要一个定义一个变量，里面有这些随机的字符
+    var ktr ='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+    //索引的范围是0~（length-1）
+    //生成一随机验证按的公式：Math【慢死】.round【昂的】（Math.random【昂的木】() * (m - n)+n）
+    function Cre(len) {//开一个函数
+        var ktr ='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+        len = len || 4//默认情况下，是4个
+        //定义一个空给的字符串
+        var codStr = ''
+        //开一个for循环
+        for(var i = 0; i < len; i++){
+
+            var ind = Math.round(Math.random()*(ktr.length-1))
+            //生成一个验证码的随机公式
+            var char = ktr[ind]// 定义一个变量char，根据随机索引ind 获取对应的字符再赋值到char上
+            if (codStr.indexOf(char)===-1){//如上面的codStr中没有随机的这个字符，则拼接，
+                // 如果有的话就不拼接，接着生成随机索引
+
+
+                //将每次的字符串拼接起来
+                codStr+= char
+            }
+        }
+        console.log(codStr)
+        return codStr//执行输出上面空字符串
+    }
+   var but = document.getElementById('but')//获取上方的buttom元素
+    but.onclick= function () {//为上方的按钮增加一个点击事件
+     this.innerHTML=Cre(26)//为页面输出你需要的几位验证码
+    }
+
+
+
+
+
+  //利用for循环来实现一个1——100的正数的求和
+    var tota = 0//定义一个变量，起始值为0
+    for (var i = 0; i <=100; i++){//开一个for循环，i的起始值为0，循环i<=100次，i每次++
+       tota += i//tota=tota+i(每次i的值累加)
+    }
+ console.log(tota)//页面打印tota
+
+    // 求 1 ~ 100 能够被2整除的数 的和  (会写)
+    var tata = 0//定义一个变量，起始值为0
+    for (var a = 0;a<=100;a++){//开一个for循环，i的起始值为0，循环a<=100次，a每次++
+       if (a % 2===0){//如果循环a里面的数值能够被2整除，
+           // 就执行下方a的值累加的代码
+           tata+=a//tata=tata+a(每次a值累加)
+       }
+    }
+console.log(tata)//页面打印tata
+
+
+
+
+//冒泡排序：（利用双for循环）
+//总定义：当前项和后一项来进行比较，
+    // 如果当前项大于后一项就换位置！
+
+var err = [29, 37, 10, 14, 4];//定义一个无序的数组
+    //需要比较err的个数-1轮，也就是err.length-1轮
+function bubb(ary) {//封装一个函数，名字为bubb
+
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>
